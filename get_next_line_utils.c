@@ -10,7 +10,7 @@ char *get_position_return(char * buffer)
     }
     return NULL;
 }
-int has_read_all_file (char * buffer, unsigned long long buffer_size)
+int has_read_all_file (char * buffer)
 {
     size_t len;
     if(!buffer)
@@ -18,21 +18,22 @@ int has_read_all_file (char * buffer, unsigned long long buffer_size)
     while(buffer[len] != '\n')
         len++;
     len++;
-    if(len>=buffer_size)
+    if(len>=BUFFER_SIZE)
         return 0;
     return 1;
     
 }
 
-char * start_to_print_at (char * buffer, char * last_char_printed)
+char * gnl (char * buffer, char * last_char_printed)
 {
+    char * end_at;
+    
+    size_t i;
     if(!buffer)
         return (NULL);
-    char * end_at;
-    //TODO: hacer logica para imprimir caracter hasta el enter y además devolver la ultima posicion impresa
     
-    while(buffer == last_char_printed)
-        buffer++
+    while(buffer[i] != last_char_printed && i < BUFFER_SIZE)
+        i++;
+    end_at=buffer[i];
     return  end_at;
-
 }
