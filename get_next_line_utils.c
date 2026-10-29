@@ -36,3 +36,4 @@ char * start_to_print_at (char * buffer, char * last_char_printed)
     return  end_at;
 
 }
+hola que tal
