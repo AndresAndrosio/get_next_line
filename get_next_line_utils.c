@@ -24,11 +24,15 @@ int has_read_all_file (char * buffer, unsigned long long buffer_size)
     
 }
 
-char * show_char (char * buffer)
+char * start_to_print_at (char * buffer, char * last_char_printed)
 {
-    if()
+    if(!buffer)
+        return (NULL);
     char * end_at;
-    //TODO: hacer logica para imprimir caracter hata el enter y además devolver la ultima posicion impresa
-      return  end_at;
+    //TODO: hacer logica para imprimir caracter hasta el enter y además devolver la ultima posicion impresa
+    
+    while(buffer == last_char_printed)
+        buffer++
+    return  end_at;
 
 }

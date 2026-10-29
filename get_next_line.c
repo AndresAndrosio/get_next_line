@@ -6,7 +6,7 @@
 /*   By: arozados <arozados@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 17:55:25 by arozados          #+#    #+#             */
-/*   Updated: 2026/10/29 11:44:24 by arozados         ###   ########.fr       */
+/*   Updated: 2026/10/29 13:01:54 by arozados         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ free_all(char * buffer, char * all_str)
 }
 
 get_next_line(int fd){
-    static char * start_at;
+    static char * last_char_printed;
     if(BUFFER_SIZE <=0 || fd <3)
         return NULL;
     char * buffer=malloc(BUFFER_SIZE);
