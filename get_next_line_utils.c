@@ -23,7 +23,7 @@ int has_read_all_file (char * buffer, unsigned long long buffer_size)
     return 1;
     
 }
-
+esto es de for 42
 char * start_to_print_at (char * buffer, char * last_char_printed)
 {
     if(!buffer)
